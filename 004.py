@@ -35,7 +35,7 @@ polynomial2 = createEquation()
 print((polynomial2.replace('x^1', 'x').replace('x^0', '')).replace('1x^', 'x^'))
 
 with open(r'polynomial.txt', 'w') as data:
-    data.write(str(polynomial1))
+    data.write(str(polynomial1.replace('x^1', 'x').replace('x^0', '')).replace('1x^', 'x^'))
     data.write('\n')
-    data.write(str(polynomial2))
+    data.write(str(polynomial2.replace('x^1', 'x').replace('x^0', '')).replace('1x^', 'x^'))
     data.close
