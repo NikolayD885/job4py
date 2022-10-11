@@ -19,7 +19,7 @@ def createEquation():
             if ratio > 0:
                 polynomial += str(ratio) + 'x^' + str(i)
             if ratio < 0:
-                polynomial += '- ' + str(abs(ratio)) + 'x^' + str(i)
+                polynomial += '-' + str(abs(ratio)) + 'x^' + str(i)
         else:
             if ratio > 0:
                 polynomial += ' + ' + str(ratio) + 'x^' + str(i)
@@ -30,12 +30,12 @@ def createEquation():
 
 
 polynomial1 = createEquation()
-print((polynomial1.replace('x^1 ', 'x ').replace('x^0', '')).replace(' 1x^', ' x^'))
+print((polynomial1.replace('x^1 ', 'x ').replace('x^0', '')).replace(' 1x^', ' x^').replace('-1x^', '-x^'))
 polynomial2 = createEquation()
-print((polynomial2.replace('x^1 ', 'x ').replace('x^0', '')).replace(' 1x^', ' x^'))
+print((polynomial2.replace('x^1 ', 'x ').replace('x^0', '')).replace(' 1x^', ' x^').replace('-1x^', '-x^'))
 
 with open(r'polynomial.txt', 'w') as data:
-    data.write(str(polynomial1.replace('x^1 ', 'x ').replace('x^0', '.0')).replace(' 1x^', ' x^'))
+    data.write(str(polynomial1.replace('x^1 ', 'x ').replace('x^0', '.0')).replace(' 1x^', ' x^').replace('-1x^', '-x^'))
     data.write('\n')
-    data.write(str(polynomial2.replace('x^1 ', 'x ').replace('x^0', '.0')).replace(' 1x^', ' x^'))
+    data.write(str(polynomial2.replace('x^1 ', 'x ').replace('x^0', '.0')).replace(' 1x^', ' x^').replace('-1x^', '-x^'))
     data.close
