@@ -19,7 +19,7 @@ def createEquation():
             if ratio > 0:
                 polynomial += str(ratio) + 'x^' + str(i)
             if ratio < 0:
-                polynomial += '-' + str(abs(ratio)) + 'x^' + str(i)
+                polynomial += '- ' + str(abs(ratio)) + 'x^' + str(i)
         else:
             if ratio > 0:
                 polynomial += ' + ' + str(ratio) + 'x^' + str(i)
